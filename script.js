@@ -88,7 +88,7 @@ function getHighProteinCereal(){
 }
 
 
-//This function takes an input of calories and amount. You can choose between under or over for the amount parametre. If this is over, it will find cereals with calories over this number, and vice versa. 
+//This function takes an input of "calories" and "amount". You can choose between under or over for the amount parametre. If this is over, it will find cereals with calories over the inputed number, and vice versa. 
 // amount {string} - a string that decides if its over/under
 // calorie {number} - a number for the calorie amount you need
 // return {list} - this list returns the final list of what meets the parameters. 
@@ -97,16 +97,14 @@ function getCerealsByCalorie(amount, calorie){
   for(var i in cerealName){
     if(amount.toLowerCase() == "over" && cerealCalorie[i] >= calorie){
       finalList.push(cerealName[i]);
-      
     }
     if(amount.toLowerCase() == "under" && cerealCalorie[i] <= calorie){
-      finalList.push(cerealName[i]);
-      
-    }
-    else{
-      return "Try a differen input. Current input not found."
+      finalList.push(cerealName[i]); 
     }
   }
+  if(finalList.length == 0){
+      return "Try a differen input. Current input not found."
+    }
   return finalList;
 }
 console.log(getCerealsByCalorie("under", 100));
