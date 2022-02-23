@@ -1,4 +1,5 @@
-# Library-Project---Rami//this parameter gets the image of the inputed cereal, and gives out the link
+# Library-Project---Rami
+//this parameter gets the image of the inputed cereal, and gives out the link
 //cereal {string} - this is the name of the cereal
 //return {string} - this returns the link of the image as a string
 function getImage(cereal){
