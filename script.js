@@ -107,7 +107,6 @@ function getCerealsByCalorie(amount, calorie){
     }
   return finalList;
 }
-console.log(getCerealsByCalorie("under", 100));
 
 
 //This function takes different nutrient facts from cereals (including sugar, sodium, and fat) and finds the healthiest ones.
